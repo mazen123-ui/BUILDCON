@@ -1,8 +1,9 @@
-*{
+* {
   font-family: sans-serif;
   text-transform: capitalize;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 :root {
@@ -31,7 +32,7 @@ html, body {
 .nav-item a {
   display: block;
   width: 100%;
-  transition: .3s;
+  transition: 0.3s;
 }
 .nav-item a:hover {
   color: var(--main-color) !important;
@@ -57,9 +58,17 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -10%);
+  transform: translate(-50%, 25%);
   text-align: center;
-  color: #fff; 
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.3s;
+}
+.home .carousel-caption.show {
+  transform: translate(-50%, -10%);
+  opacity: 1;
+  visibility: visible;
 }
 .home .carousel-caption h1 {
   font-size: 3rem;
@@ -74,7 +83,7 @@ html, body {
   max-width: 600px;
   margin: 0 auto;
 }
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .home .carousel-caption {
     width: 80%;
   }
@@ -85,7 +94,8 @@ html, body {
     font-size: 14px;
   }
 }
-#services,#team {
+#services,
+#team {
   background-color: #e2f1f7;
 }
 form {
@@ -110,15 +120,15 @@ form input:focus {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   z-index: 10000;
   transform: translateY(10px);
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 .btn-up:hover {
-  color:#000 !important;
+  color: #000 !important;
 }
 .btn-up.show {
   transform: translateY(0);
@@ -132,8 +142,113 @@ form input:focus {
 }
 .media i {
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 .media i:hover {
   color: var(--main-color) !important;
+}
+/* animation for about sectoin */
+/* LEFT */
+#about .col-lg-4 {
+  transform: translateX(-100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s ease;
+}
+#about .col-lg-4.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* RIGHT */
+#about .col-lg-8 {
+  transform: translateX(100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s ease;
+}
+#about .col-lg-8.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* animation for services section */
+#services .col-lg-4 {
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+#services .col-lg-4.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+#services .col-lg-4:nth-child(1) {
+  transition-delay: 0s;
+}
+#services .col-lg-4:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#services .col-lg-4:nth-child(3) {
+  transition-delay: 0.4s;
+}
+/* animation for portfolio section */
+#portfolio .col-lg-4 {
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+#portfolio .col-lg-4.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+#portfolio .col-lg-4:nth-child(1) {
+  transition-delay: 0s;
+}
+#portfolio .col-lg-4:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#portfolio .col-lg-4:nth-child(3) {
+  transition-delay: 0.4s;
+}
+/* animation for team section */
+#team .col-lg-3 {
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+#team .col-lg-3.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+#team .col-lg-3:nth-child(1) {
+  transition-delay: 0s;
+}
+#team .col-lg-3:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#team .col-lg-3:nth-child(3) {
+  transition-delay: 0.4s;
+}
+#team .col-lg-3:nth-child(4) {
+  transition-delay: 0.6s;
+}
+/* animation for the contact section */
+#contact form {
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+#contact form.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }

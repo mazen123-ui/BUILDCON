@@ -273,33 +273,7 @@
     </footer>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Make active link
-    let navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(item => {
-      item.addEventListener('click', (e) => {
-        navLinks.forEach(item => {
-          item.classList.remove('active')
-        })
-        e.currentTarget.classList.add('active')
-      })
-    })
-    // Show The UP Button ON Scroll
-    let upBtn = document.querySelector('.up');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= 400) {
-        upBtn.classList.add('show')
-      } else {
-        upBtn.classList.remove('show')
-      }
-    })
-    upBtn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })
-      })
-  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>
